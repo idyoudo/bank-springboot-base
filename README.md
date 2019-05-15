@@ -1,6 +1,3 @@
-# bank-springboot-base
-漫谈Spring Boot基础系列
-
 
 ## 漫谈Spring Boot基础系列
 
