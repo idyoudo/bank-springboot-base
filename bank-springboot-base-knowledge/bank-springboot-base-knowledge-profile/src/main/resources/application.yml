@@ -1,0 +1,8 @@
+#web端口配置
+server:
+  port: 8081
+
+spring:
+   profiles:
+     active: prod
+

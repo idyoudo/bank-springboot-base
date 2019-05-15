@@ -1,0 +1,26 @@
+#web端口配置
+server:
+  port: 8081
+
+logging:
+  level:
+    root: error
+    com.icangjinge.bank.springboot.base: info
+  file: ${user.home}/logs/bank-springboot-base-knowledge-log.log
+
+com:
+  icangjingge:
+   #自定义属性
+    name: icangjingge
+    address: www.icangjingge.com
+
+    #随机值配置
+    secret: ${random.value}
+    number: ${random.int}
+    bignumber: ${random.long}
+    uuid: ${random.uuid}
+    number_less_than_ten: ${random.int(10)}
+    number_in_range: ${random.int[1024,65536]}
+
+    #配置引用
+    refname: ${com.icangjingge.name}

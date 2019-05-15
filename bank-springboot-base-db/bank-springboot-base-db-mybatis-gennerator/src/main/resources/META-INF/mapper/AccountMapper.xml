@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.icangjinge.bank.springboot.base.persistence.AccountMapper">
+  <resultMap id="BaseResultMap" type="com.icangjinge.bank.springboot.base.entity.Account">
+    <id column="ACNO" jdbcType="VARCHAR" property="acno" />
+    <result column="ACNAME" jdbcType="VARCHAR" property="acname" />
+    <result column="IDNO" jdbcType="VARCHAR" property="idno" />
+    <result column="STATUS" jdbcType="CHAR" property="status" />
+    <result column="CREATETIME" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UPDATETIME" jdbcType="TIMESTAMP" property="updatetime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    ACNO, ACNAME, IDNO, STATUS, CREATETIME, UPDATETIME
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from account
+    where ACNO = #{acno,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from account
+    where ACNO = #{acno,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.icangjinge.bank.springboot.base.entity.Account">
+    insert into account (ACNO, ACNAME, IDNO, 
+      STATUS, CREATETIME, UPDATETIME
+      )
+    values (#{acno,jdbcType=VARCHAR}, #{acname,jdbcType=VARCHAR}, #{idno,jdbcType=VARCHAR}, 
+      #{status,jdbcType=CHAR}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.icangjinge.bank.springboot.base.entity.Account">
+    insert into account
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="acno != null">
+        ACNO,
+      </if>
+      <if test="acname != null">
+        ACNAME,
+      </if>
+      <if test="idno != null">
+        IDNO,
+      </if>
+      <if test="status != null">
+        STATUS,
+      </if>
+      <if test="createtime != null">
+        CREATETIME,
+      </if>
+      <if test="updatetime != null">
+        UPDATETIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="acno != null">
+        #{acno,jdbcType=VARCHAR},
+      </if>
+      <if test="acname != null">
+        #{acname,jdbcType=VARCHAR},
+      </if>
+      <if test="idno != null">
+        #{idno,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=CHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.icangjinge.bank.springboot.base.entity.Account">
+    update account
+    <set>
+      <if test="acname != null">
+        ACNAME = #{acname,jdbcType=VARCHAR},
+      </if>
+      <if test="idno != null">
+        IDNO = #{idno,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        STATUS = #{status,jdbcType=CHAR},
+      </if>
+      <if test="createtime != null">
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        UPDATETIME = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where ACNO = #{acno,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.icangjinge.bank.springboot.base.entity.Account">
+    update account
+    set ACNAME = #{acname,jdbcType=VARCHAR},
+      IDNO = #{idno,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=CHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      UPDATETIME = #{updatetime,jdbcType=TIMESTAMP}
+    where ACNO = #{acno,jdbcType=VARCHAR}
+  </update>
+  <resultMap id="BaseResultMap" type="com.icangjinge.bank.springboot.base.entity.Account">
+    <id column="ACNO" jdbcType="VARCHAR" property="acno" />
+    <result column="ACNAME" jdbcType="VARCHAR" property="acname" />
+    <result column="IDNO" jdbcType="VARCHAR" property="idno" />
+    <result column="STATUS" jdbcType="CHAR" property="status" />
+    <result column="CREATETIME" jdbcType="TIMESTAMP" property="createtime" />
+    <result column="UPDATETIME" jdbcType="TIMESTAMP" property="updatetime" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    ACNO, ACNAME, IDNO, STATUS, CREATETIME, UPDATETIME
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.String" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from account
+    where ACNO = #{acno,jdbcType=VARCHAR}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.String">
+    delete from account
+    where ACNO = #{acno,jdbcType=VARCHAR}
+  </delete>
+  <insert id="insert" parameterType="com.icangjinge.bank.springboot.base.entity.Account">
+    insert into account (ACNO, ACNAME, IDNO, 
+      STATUS, CREATETIME, UPDATETIME
+      )
+    values (#{acno,jdbcType=VARCHAR}, #{acname,jdbcType=VARCHAR}, #{idno,jdbcType=VARCHAR}, 
+      #{status,jdbcType=CHAR}, #{createtime,jdbcType=TIMESTAMP}, #{updatetime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="com.icangjinge.bank.springboot.base.entity.Account">
+    insert into account
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="acno != null">
+        ACNO,
+      </if>
+      <if test="acname != null">
+        ACNAME,
+      </if>
+      <if test="idno != null">
+        IDNO,
+      </if>
+      <if test="status != null">
+        STATUS,
+      </if>
+      <if test="createtime != null">
+        CREATETIME,
+      </if>
+      <if test="updatetime != null">
+        UPDATETIME,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="acno != null">
+        #{acno,jdbcType=VARCHAR},
+      </if>
+      <if test="acname != null">
+        #{acname,jdbcType=VARCHAR},
+      </if>
+      <if test="idno != null">
+        #{idno,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        #{status,jdbcType=CHAR},
+      </if>
+      <if test="createtime != null">
+        #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.icangjinge.bank.springboot.base.entity.Account">
+    update account
+    <set>
+      <if test="acname != null">
+        ACNAME = #{acname,jdbcType=VARCHAR},
+      </if>
+      <if test="idno != null">
+        IDNO = #{idno,jdbcType=VARCHAR},
+      </if>
+      <if test="status != null">
+        STATUS = #{status,jdbcType=CHAR},
+      </if>
+      <if test="createtime != null">
+        CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="updatetime != null">
+        UPDATETIME = #{updatetime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where ACNO = #{acno,jdbcType=VARCHAR}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.icangjinge.bank.springboot.base.entity.Account">
+    update account
+    set ACNAME = #{acname,jdbcType=VARCHAR},
+      IDNO = #{idno,jdbcType=VARCHAR},
+      STATUS = #{status,jdbcType=CHAR},
+      CREATETIME = #{createtime,jdbcType=TIMESTAMP},
+      UPDATETIME = #{updatetime,jdbcType=TIMESTAMP}
+    where ACNO = #{acno,jdbcType=VARCHAR}
+  </update>
+</mapper>

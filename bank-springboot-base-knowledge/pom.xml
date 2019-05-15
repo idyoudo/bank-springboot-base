@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bank-springboot-base</artifactId>
+        <groupId>com.icangjinge</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bank-springboot-base-knowledge</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>bank-springboot-base-knowledge-helloworld</module>
+        <module>bank-springboot-base-knowledge-springbootapplication</module>
+        <module>bank-springboot-base-knowledge-web</module>
+        <module>bank-springboot-base-knowledge-properties</module>
+        <module>bank-springboot-base-knowledge-configurationproperties</module>
+        <module>bank-springboot-base-knowledge-yaml</module>
+        <module>bank-springboot-base-knowledge-profile</module>
+        <module>bank-springboot-base-knowledge-log</module>
+        <module>bank-springboot-base-knowledge-logback</module>
+        <module>bank-springboot-base-knowledge-banner</module>
+    </modules>
+
+
+
+</project>

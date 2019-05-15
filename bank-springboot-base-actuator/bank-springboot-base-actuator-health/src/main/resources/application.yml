@@ -1,0 +1,13 @@
+server:
+  port: 8080
+
+management:
+  server:
+     port: 54511  # 指定监听端口，不指定则语server端口一直
+  security:
+    enabled: false #指定访问信息不进行用户验证
+
+springboot:
+  property:
+    name: actuator
+    address: I am in SpringBoot

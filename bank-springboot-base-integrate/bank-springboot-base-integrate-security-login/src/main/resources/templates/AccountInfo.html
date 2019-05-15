@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <title>hello</title>
+</head>
+<body>
+    <h1 th:text="用户信息列表"></h1>
+    <table>
+        <tr>
+            <th>卡号</th>
+            <th>姓名</th>
+            <th>身份证号</th>
+        </tr>
+        <tr th:each="Account : ${AccountList}">
+            <td th:text="${Account.acno}"></td>
+            <td th:text="${Account.acname}"></td>
+            <td th:text="${Account.idno}"></td>
+        </tr>
+    </table>
+</body>
+</html>

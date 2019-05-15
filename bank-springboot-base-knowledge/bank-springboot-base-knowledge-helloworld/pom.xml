@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <parent>
+        <artifactId>bank-springboot-base-knowledge</artifactId>
+        <groupId>com.icangjinge</groupId>
+        <version>1.0-SNAPSHOT</version>
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>bank-springboot-base-knowledge-helloworld</artifactId>
+
+    <dependencies>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+       <!--
+           spring boot加上这个插件，才可以使用Java -jar命令来启动jar包，并且有了这个插件，
+           打的包里面才会有maven依赖的jar包和spring boot的启动类，所以打的jar包也就比较大，
+           而且MANIFEST.MF文件里面也会有启动类的信息。但是如果不加这个插件，则打的包里面就只有class文件，
+           没有依赖的Jar包，MANIFEST.MF文件里面也没有启动类的信息，所以如果不加这个插件就不能独立启动
+       -->
+
+
+       <build>
+           <plugins>
+               <plugin>
+                   <groupId>org.springframework.boot</groupId>
+                   <artifactId>spring-boot-maven-plugin</artifactId>
+               </plugin>
+           </plugins>
+       </build>
+   </project>
